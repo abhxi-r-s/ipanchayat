@@ -1,0 +1,57 @@
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Panchayat_emblem.svg/1200px-Panchayat_emblem.svg.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      iPanchayat | MINISTRY OF PANCHAYATI RAJ 
+    </a>
+    <a class="nav-link active" aria-current="page" routerLink=""><h5>Go Back</h5></a>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      <div class="row g-3">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img height="350px" src="assets/images/banner4.png" class="d-block w-100" alt="...">
+              </div>
+               </div>
+          </div>  
+</div>
+</div>
+      
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" >ADMINISTRATOR LOGIN</a>
+                      
+      </div>
+    </nav>
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      <div class="row g-10">
+          <form class="row g-3 needs-validation" novalidate #adminlogin="ngForm" (ngSubmit)="adminlogin.valid && Alogin()">
+              <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                 
+                  <div>
+                  <label for="validationCustomName" class="form label">USERNAME</label>
+                  <input id="validationCustomName" type="text" class="form-control" pattern="[A-Za-z ]+" [(ngModel)]="data1.adminname" name="adminname" minlength="5" maxlength="20" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid Username !
+                  </div>
+                </div>
+                <div>
+                  <label for="validationCustomPassword" class="form label">PASSWORD</label>
+                  <input type="password" id="validationCustomPassword" class="form-control" [(ngModel)]="data1.adminpassword" name="adminpassword" minlength="8" maxlength="8" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid Password !
+                  </div>
+                </div>
+                <br>
+                  <button class="btn btn-danger">SIGN IN</button>
+              </div>
+          </form>
+      </div>
+  </div>
+  </div>
+</div>

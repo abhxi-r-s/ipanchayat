@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <div class="row g-3">
+         <form class="row g-3 needs-validation" novalidate #adminregister="ngForm" (ngSubmit)="adminregister.valid && Asignup()">
+              <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><h3>ADMIN SIGNUP </h3><a href="/aw">Go back</a></li>
+                  </ol>
+                </nav>
+                <div>
+              <label for="validationCustomName" class="form-label">Name:</label>
+              <input id="validationCustomName" type="text" pattern="[A-Za-z ]+" class="form-control" [(ngModel)]="data1.adminname" name="adminname" minlength="5" maxlength="20" required>
+              <div class="invalid-feedback">
+                Please provide a valid Username !
+              </div>
+            </div>
+            
+            <div>
+              <label for="validationCustomAddress" class="form-label">Address:</label>
+             <textarea id="validationCustomAddress" cols="30" rows="10" class="form-control" [(ngModel)]="data1.adminaddress" name="adminaddress" required></textarea>
+             <div class="invalid-feedback">
+              Please provide a valid data !
+            </div>
+            </div>
+
+            <div>
+             <label for="validationCustomVoterid" class="form-label">Voter's ID:</label>
+             <input id="validationCustomVoterid" type="text" class="form-control" [(ngModel)]="data1.adminvoterid" name="adminvoterid" minlength="10" maxlength="10" required>
+             <div class="invalid-feedback">
+              Please provide a valid VoterId !
+            </div>
+            </div>
+            
+            <div>
+             <label for="validationCustomPosition" class="form-label">Position:</label>
+            <select  id="validationCustomPosition" class="form-control" [(ngModel)]="data1.adminposition" name="adminposition" required>
+              <option value="Electricity">President</option>
+              <option value="Water">Secretary</option>
+              <option value="Health">Staff</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select your position !
+            </div>
+          </div>
+            
+          <div>
+             <label for="validationCustomPassword" class="form-label">Password:</label>
+             <input id="validationCustomPassword"  type="password" class="form-control" [(ngModel)]="data1.adminpassword" name="adminpassword" minlength="8" maxlength="8" required>
+             <div class="invalid-feedback">
+              Please provide a secured password !
+            </div>
+            </div>
+
+           <br>
+             <button class="btn btn-warning">REGISTER</button>
+              </div>
+          </form>
+    </div>
+  </div>
+</div>
+</div>

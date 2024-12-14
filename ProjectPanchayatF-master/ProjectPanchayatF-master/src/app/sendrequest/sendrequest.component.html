@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row">
+      <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <div class="row g-3">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><h3>UPLOAD REQUESTS !</h3><a href="/uw">Go back</a></li>
+            </ol>
+          </nav>
+ <form class="row g-3 needs-validation" novalidate #sendreport="ngForm" (ngSubmit)="sendreport.valid && Request()">    
+    
+  <div>
+    <label for="validationCustomName" class="form-label">Name:</label>
+    <input id="validationCustomName" type="text" class="form-control" [(ngModel)]="data1.requestname" pattern="[A-Za-z ]+" name="requestname" minlength="5" maxlength="15" required>
+    <div class="invalid-feedback">
+      Please provide a valid Name !
+    </div>
+  </div>
+    <div>
+    <label for="validationCustomVoterid" class="form-label">Voterid:</label>
+    <input id="validationCustomVoterid" type="text" class="form-control" [(ngModel)]="data1.vid" name="vid" minlength="10" maxlength="10" required><br>
+    <div class="invalid-feedback">
+      Please provide a valid VoterId !
+    </div>
+  </div>
+    <div>
+    <label for="validationCustomFacility" class="form-label">Select Facility:</label>
+    <select name="" id="validationCustomFacility" class="form-control" [(ngModel)]="data1.facilitytype" name="facilitytype" required>
+      <option value="Electricity">Electricity</option>
+      <option value="Water">Water</option>
+      <option value="Health">Health</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select your Facility !
+    </div>
+  </div>
+    <br>
+    <div>
+    <label for="validationCustomRequest" class="form-label">Request:</label><br>
+    <textarea id="validationCustomRequest" class="form-control" [(ngModel)]="data1.userequest" name="userequest" minlength="10" maxlength="25" required></textarea>
+    <div class="invalid-feedback">
+      Please mention about your request !
+    </div>
+  </div>
+  <br>
+  <div>
+  <button class="btn btn-warning">UPLOAD</button>
+</div>
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>

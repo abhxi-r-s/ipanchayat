@@ -1,0 +1,36 @@
+<div class="container"><br>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><h3>USERs LIST</h3><a href="/aw">Go back</a></li>
+    </ol>
+  </nav>
+    <br />
+    <div class="row">
+        
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row">
+              
+            <div *ngFor="let i of data" class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+              <br><div class="card" style="width: 15rem; height: 15rem;">
+                <div class="card-body">
+
+                  <h5 class="card-title">Name:{{i.name}}</h5>
+                  <h5 class="card-title">Ward:{{i.ward}}</h5> 
+                  <h5 class="card-title">Address:{{i.address}}</h5>
+                  <h5 class="card-title">Voter Id:{{i.voterid}}</h5>
+                  <h5 class="card-title">Password:{{i.password}}</h5>
+
+                </div>
+              </div>
+            <br>
+              <button type="button" class="btn btn-danger" (click)="deleteuser(i)">Delete</button>&nbsp;<br>
+            </div>
+        </div>
+            
+        </div>
+
+<br />
+
+   
+    </div>
+</div>

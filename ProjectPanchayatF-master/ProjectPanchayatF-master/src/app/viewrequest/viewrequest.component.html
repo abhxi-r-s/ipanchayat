@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      
+      <br><nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><h3>FACILITY REQUESTS !</h3><a href="/aw">Go back</a></li>
+        </ol>
+      </nav>
+      <br>
+        <ul>
+        <form>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Voterid</th>
+                <th scope="col">Facility</th>
+                <th scope="col">Request</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let i of data">
+                <td>{{i.requestname}}</td>
+                <td>{{i.vid}}</td>
+                <td>{{i.facilitytype}}</td>
+                <td>{{i.userequest}}</td>
+                <td>{{i.status}}</td>
+                <td><button type="button" class="btn btn-primary" (click)="approve(i)">Approve!</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-primary" (click)="deny(i)">Deny!</button></td>
+              </tr>
+              
+            </tbody>
+          </table>
+      </form>
+        </ul>
+        <br>
+       
+    </div>

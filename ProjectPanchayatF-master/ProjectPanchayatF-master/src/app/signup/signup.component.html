@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <div class="row g-3">
+            <form class="row g-3 needs-validation" novalidate #register="ngForm" (ngSubmit)="register.valid && Usignup()">
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><h3>USER SIGNUP</h3><a href="/aw">Go back</a></li>
+    </ol>
+</nav>
+<div>
+               <label for="validationCustomName" class="form-label">Name:</label>
+                <input id="validationCustomName" type="text" class="form-control" [(ngModel)]="data.name" pattern="[A-Za-z ]+" name="name" minlength="5" maxlength="20" required> 
+                <div class="invalid-feedback">
+                    Please provide a valid Name !
+                  </div>
+            </div>
+            <div>
+                <label for="validationCustomWard" class="form-label">Ward Name:</label>
+                <select name="" id="validationCustomWard" class="form-control" [(ngModel)]="data.ward" name="ward" required>
+                    <option value="SELECT">SELECT</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                    <option value="H">H</option>
+                </select> 
+                <div class="invalid-feedback">
+                    Please select your ward !
+                  </div>   
+            </div>
+            <div>
+                <label for="validationCustomAddress" class="form-label">Address:</label>
+                <textarea  id="validationCustomAddress" cols="30" rows="10" class="form-control" [(ngModel)]="data.address" name="address" required></textarea>
+                <div class="invalid-feedback">
+                    Please provide a valid Address !
+                  </div> 
+            </div>
+            <div>
+                <label for="validationCustomVoterid" class="form-label">VoterId:</label>
+                <input id="validationCustomVoterid" type="text" class="form-control" [(ngModel)]="data.voterid" name="voterid" minlength="10" maxlength="10" required>
+                <div class="invalid-feedback">
+                    Please provide a valid VoterId !
+                  </div> 
+            </div>    
+            <div>
+                <label for="validationCustomPassword" class="form-label">Password:</label>
+                <input id="validationCustomPassword" type="password" name="" class="form-control" [(ngModel)]="data.password" name="password" minlength="8" maxlength="8" required>
+                <div class="invalid-feedback">
+                    Please provide a secured password !
+                  </div>
+            </div>  <div>
+                <br> <button class="btn btn-warning">REGISTER</button>
+            </div>
+    </form>
+         
+      
+     
+    </div>
+</div>
+</div>
